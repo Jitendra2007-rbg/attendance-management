@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Attendance from '../attendance/Attendance'
-import StudentList from '../attendance/StudentList'
+import StudentList from '../students/StudentList'
 import AttendancePdf from '../attendance/AttendancePdf'
 
 const AttendanceScreen = ({ sections, onAttendanceSubmit }) => {
   const { sectionId } = useParams()
-  console.log(sectionId);
   const navigate = useNavigate()
   const section = sections.find(s => String(s.id) === sectionId)
   // By default, all checkboxes are unchecked (present: false)

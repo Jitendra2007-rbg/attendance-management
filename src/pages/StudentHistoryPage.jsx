@@ -1,5 +1,5 @@
 import React from 'react'
-import StudentHistory from '../sectionadd/StudentHistory'
+import StudentHistory from '../students/StudentHistory'
 
 
 const StudentHistoryScreen = () => {

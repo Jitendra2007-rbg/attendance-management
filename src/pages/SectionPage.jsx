@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import StudentForm from '../sectionadd/StudentForm';
-import StudentInfo from '../sectionadd/StudentInfo';
+import StudentForm from '../students/StudentForm';
+import StudentInfo from '../students/StudentInfo';
 
 const SectionScreen = ({ sections, onAddStudent }) => {
   const [showForm, setShowForm] = useState(false);

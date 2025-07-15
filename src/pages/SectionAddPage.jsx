@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import SectionDetails from '../sectionadd/SectionDetails'
-import StudentForm from '../sectionadd/StudentForm'
+import SectionDetails from '../section/SectionDetails'
+import StudentForm from '../students/StudentForm'
 
 const SectionAddScreen = ({ onConfirm }) => {
   const [sectionName, setSectionName] = useState('')

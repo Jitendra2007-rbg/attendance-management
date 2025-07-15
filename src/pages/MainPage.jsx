@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../main/Navbar'
-import Home from '../main/Home'
+import Navbar from '../layouts/Navbar'
+import Home from '../section/Home'
 
 const MainScreen = ({ sections }) => {
   return (
