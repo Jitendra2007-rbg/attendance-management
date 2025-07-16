@@ -3,8 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Attendance from '../attendance/Attendance'
 import StudentList from '../students/StudentList'
 import AttendancePdf from '../attendance/AttendancePdf'
+import Calendar from '../components/Calendar'
 
-const AttendanceScreen = ({ sections, onAttendanceSubmit }) => {
+
+const AttendancePage = ({ sections, onAttendanceSubmit }) => {
   const { sectionId } = useParams()
   const navigate = useNavigate()
   const section = sections.find(s => String(s.id) === sectionId)
@@ -50,6 +52,10 @@ const AttendanceScreen = ({ sections, onAttendanceSubmit }) => {
         >
           ← Back
         </button>
+        <div style={{display: 'flex', marginLeft:'60%'}}>
+          <Calendar />
+        </div>
+        
         <h2 style={{ color: '#1976d2', fontFamily: 'Nunito, sans-serif', marginBottom: 24 }}>{section.name} - Attendance</h2>
         <h3 style={{ color: '#1976d2', fontWeight: 700, fontSize: 20, fontFamily: 'Nunito, sans-serif', marginBottom: 8 }}>Previous Attendance Result</h3>
         <Attendance attendance={section.lastAttendance} />
@@ -75,6 +81,7 @@ const AttendanceScreen = ({ sections, onAttendanceSubmit }) => {
       >
         ← Back
       </button>
+
       <h2 style={{ color: '#1976d2', fontFamily: 'Nunito, sans-serif', marginBottom: 24 }}>{section.name} - Attendance</h2>
       {!submitted ? (
         <StudentList students={attendance} onCheckboxChange={handleCheckboxChange} onSubmit={handleSubmit} />
@@ -105,4 +112,4 @@ const AttendanceScreen = ({ sections, onAttendanceSubmit }) => {
   )
 }
 
-export default AttendanceScreen
+export default AttendancePage

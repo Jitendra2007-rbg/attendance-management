@@ -1,14 +1,12 @@
-import React from 'react'
-import StudentHistory from '../students/StudentHistory'
+import React from 'react';
+import StudentHistory from '../students/StudentHistory';
 
-
-const StudentHistoryScreen = () => {
+const StudentHistoryPage = ({ sections }) => {
   return (
     <div>
-
-        <StudentHistory />
+      <StudentHistory sections={sections} />
     </div>
-  )
-}
+  );
+};
 
-export default StudentHistoryScreen
+export default StudentHistoryPage;

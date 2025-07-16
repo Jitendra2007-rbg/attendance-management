@@ -34,7 +34,9 @@ const AppRoutes = ({ sections, onAddSection, onAddStudent, onAttendanceSubmit, o
       <Route path="/add-section" element={<SectionAddPage onConfirm={onAddSection} />} />
       <Route path="/section/:sectionId" element={<SectionPage sections={sections} onAddStudent={onAddStudent} />} />
       <Route path="/edit-student/:sectionId/:regNo" element={<EditStudentRoute sections={sections} onSave={onEditStudent} />} />
-      <Route path="/history/:sectionId" element={<StudentHistoryPage sections={sections} />} />
+      <Route path="/history/:sectionId/:regNo" element={<StudentHistoryPage sections={sections} />} />
+      
+
     </Routes>
   );
 };

@@ -13,13 +13,16 @@ const SectionScreen = ({ sections, onAddStudent }) => {
 
   if (!section) return null;
 
+  const handleHistory = (student) => {
+  navigate(`/history/${sectionId}/${student.regNo}`);
+};
+
+
+
   const handleEdit = (student) => {
     navigate(`/edit-student/${sectionId}/${student.regNo}`);
   };
-  const handleHistory = (student) => {
-    setShowHistoryStudent(student);
-    // navigate to history screen or open modal as needed
-  };
+  
 
   return (
     <div style={{ maxWidth: 600, margin: '0 auto', padding: 32 }}>
